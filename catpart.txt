@@ -1,0 +1,53 @@
+# SOURCE
+
+	SOURCE TYPE:
+		empty. 					[error]
+		file.					[property file]
+		directory. 				[property directory]
+		undefined file. 		[error]
+		undefined directory. 	[error]
+		
+	NUMBER OF SOURCES:
+		one.  					[if file || directory]
+		many. 					[if file || directory]
+		
+# DEST
+ 
+	DEST:
+		directory.
+		empty. 					[error]
+		mutiple. 				[error]
+		undefined. 				[error]
+		
+# OPT
+
+	NUMBER OF OPTIONS:
+		empty.                  [property emptyOPT]
+		one or more.
+  
+	-b:
+        -b was entered.         [if !emptyOPT]
+        -b was not entered.     [if !emptyOPT]
+
+	-f:
+        -f was entered.         [if !emptyOPT]
+        -f was not entered.     [if !emptyOPT]
+        
+	-r:
+        -r was entered.         [if !emptyOPT]
+        -r was not entered.     [if !emptyOPT]
+        
+	-v:
+        -v was entered.         [if !emptyOPT]
+        -v was not entered.     [if !emptyOPT]
+		
+
+	other:
+		undefined opt. 			[error]
+		
+# DUPLICATE
+	
+	 IF SOURCE EXIST IN DEST:
+        True.                   [error] [if file || directory]
+        False.                  
+		
